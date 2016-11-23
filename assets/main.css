@@ -97,6 +97,14 @@ button.navbar-toggle {
 	background: #fff;
 }
 
+.main-content .row {
+	margin: 36px 0px;
+}
+
+.main-content img {
+	width: 100%;
+}
+
 .page-title {
 	
 }
@@ -114,6 +122,15 @@ button.navbar-toggle {
 	padding: 0px 72px;
 	margin-top: 36px;
 	background: #e0e0e0;
+}
+
+.footer-links ul {
+	padding-left: 0px;
+	list-style: none;
+}
+
+.footer-links a {
+	color: #1c8ce3;
 }
 
 .footer-links .footer-logo {

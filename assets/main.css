@@ -1,0 +1,126 @@
+body {
+	background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+a {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+p {
+	font-family: 'Quattrocento', serif;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar {
+	text-align: center;
+	padding: 24px 0px;
+	background: #fff;
+}
+
+.top-bar img {
+	height: 48px;
+}
+
+nav.navbar {
+	margin-bottom: 0px;
+	background: #fff;
+	border: none;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar ul.navbar-nav li .main-site-logo {
+	padding: 12px 22px;
+}
+
+.navbar ul.navbar-nav li .main-site-logo object {
+	height: 44px;
+	pointer-events: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+  border: none;
+}
+
+button.navbar-toggle {
+	background: #1c8ce3;
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+	background: #1c8ce3;
+}
+
+.navbar ul.navbar-nav li {
+	
+}
+
+.navbar ul.navbar-nav li:first-child {
+	
+}
+
+.navbar ul.navbar-nav li a {
+	color: #1c8ce3;
+	padding: 24px 22px;
+	text-shadow: none;
+}
+
+.navbar ul.navbar-nav li:hover {
+	
+}
+
+.navbar ul.navbar-nav li:hover a {
+	color: #1c8ce3;
+}
+
+.main-content {
+	padding: 0px 72px;
+	background: #fff;
+}
+
+.page-title {
+	
+}
+
+.row.centerpiece {
+	margin-bottom: 36px;
+}
+
+.row.centerpiece img {
+	width: 100%;
+}
+
+.footer-links {
+	color: #9c9c9c;
+	padding: 0px 72px;
+	margin-top: 36px;
+	background: #e0e0e0;
+}
+
+.footer-links .footer-logo {
+	margin-top: 36px;
+}
+
+.final-footer-text {
+	margin-top: 36px;
+	text-align: center;
+}

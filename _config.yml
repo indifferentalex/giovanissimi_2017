@@ -13,22 +13,23 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Meeting Nazionale Giovanissimi 2017 Porto Sant'Elpidio
+email: vincsantoni@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Benvenuti al sito ufficiale della Città di Porto Sant'Elpidio
+  che ospiterà il Meeting Nazionale Giovanissimi 2017.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://meetingpse2017.it" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/images/giovanissimi_logo_blue.svg"
+# twitter_username: jekyllrb
+# github_username:  jekyll
 
 # Build settings
 markdown: kramdown
 # theme: minima
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
 include: ['_pages']
 exclude:
   - Gemfile

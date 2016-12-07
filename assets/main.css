@@ -117,6 +117,30 @@ button.navbar-toggle {
 	width: 100%;
 }
 
+.main-content .gallery-row {
+	margin: 0px;
+}
+
+.main-content .gallery-row .gallery-image {
+	padding: 18px;
+}
+
+.instagram-invite {
+	text-align: center;
+	/*overflow: hidden;*/
+	/*border-top: 1px solid #9c9c9c;	*/
+}
+
+.instagram-invite h1 {
+/*	margin: 36px 0px;*/
+}
+
+.instagram-invite img {
+	position: relative;
+	top: -50px;
+	width: 30%;
+}
+
 .footer-links {
 	color: #9c9c9c;
 	padding: 0px 72px;

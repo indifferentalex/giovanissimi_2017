@@ -14,6 +14,10 @@ p {
 	font-family: 'Quattrocento', serif;
 }
 
+p a {
+	font-family: 'Quattrocento', serif;	
+}
+
 .vcenter {
   display: inline-block;
   vertical-align: middle;

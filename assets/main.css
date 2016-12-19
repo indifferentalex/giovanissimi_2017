@@ -93,12 +93,23 @@ button.navbar-toggle {
 }
 
 .navbar ul.navbar-nav li:hover a {
+	text-decoration: underline;
 	color: #1c8ce3;
 }
 
 .main-content {
-	padding: 0px 72px;
+	padding: 0px 24px;
 	background: #fff;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+  	padding: 0px;
+  }
+}
+
+.main-content.map-content {
+	padding: 0px;
 }
 
 .main-content .row {
@@ -129,6 +140,12 @@ button.navbar-toggle {
 	padding: 18px;
 }
 
+@media (max-width: 992px) {
+	.main-content .gallery-row .gallery-image {
+		padding: 6px 12px;
+	}
+}
+
 .instagram-invite {
 	text-align: center;
 	/*overflow: hidden;*/
@@ -145,11 +162,65 @@ button.navbar-toggle {
 	width: 30%;
 }
 
+.row.map {
+	margin: 0px;
+}
+
+.map-column {
+	height: 100vh;
+	position: fixed;
+	margin-top: -73px;
+	padding: 0px;
+}
+
+.features-list {
+	padding: 0px;
+}
+
+.features-list h3 {
+	color: #1c8ce3;
+	margin-top: 0px;
+	margin-bottom: 24px;
+	padding: 0px 24px 6px 24px;
+	border-bottom: 1px solid #1c8ce3;
+}
+
+.features-list .row {
+	margin: 0px;
+}
+
+.features-list .row.single-feature {
+	margin-bottom: 12px;
+	padding: 0px 24px;
+}
+
+.features-list .row.single-feature:last-child .text {
+	border-bottom: none;
+}
+
+.features-list .row.single-feature h5 {
+	margin-top: 0px;
+}
+
+.features-list .row.single-feature .text {
+	padding: 0px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.features-list .row.single-feature .text div {
+	padding: 0px;
+}
+
 .footer-links {
+	position: relative;
 	color: #9c9c9c;
 	padding: 0px 72px;
 	margin-top: 36px;
 	background: #e0e0e0;
+}
+
+.footer-links.map-footer {
+	margin-top: 0px;
 }
 
 .footer-links ul {

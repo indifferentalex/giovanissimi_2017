@@ -1,0 +1,135 @@
+---
+layout: map
+---
+
+<div class="row map">
+	<div id="map-column" class="col-md-9 map-column">
+		<div id="map" style="height: 100%; width: 100%; position: absolute;"></div>
+		<script>
+		  function initMap() {
+		    // Styles a map in night mode.
+		    var map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 43.256, lng: 13.759},
+				zoom: 12,
+				scrollwheel: false,
+				streetViewControl: false,
+				fullscreenControl: false,
+				styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
+		    });
+		  }
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgCP_oxgz2IRDYZYvisAmOzFZuHXUDHF8&callback=initMap"
+		async defer></script>
+	</div>
+	<div class="col-md-9"></div>
+	<div class="col-md-3 features-list">
+		<h3>Alberghi</h3>
+		<div class="features-sub-list">
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>Ristoranti</h3>
+		<div class="features-sub-list">
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row single-feature">
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Gran Ristorante Gambero</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Un esponente esemplare della cucina Marchigiana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>

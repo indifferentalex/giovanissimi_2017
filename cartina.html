@@ -4,132 +4,634 @@ layout: map
 
 <div class="row map">
 	<div id="map-column" class="col-md-9 map-column">
+		<a href="#map"></a>
 		<div id="map" style="height: 100%; width: 100%; position: absolute;"></div>
 		<script>
-		  function initMap() {
-		    // Styles a map in night mode.
-		    var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 43.256, lng: 13.759},
-				zoom: 12,
-				scrollwheel: false,
-				streetViewControl: false,
-				fullscreenControl: false,
-				styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
-		    });
-		  }
+			function initMap() {
+				jQuery(function() {
+				    // Styles a map in night mode.
+				    var map = new google.maps.Map(document.getElementById('map'), {
+						center: { lat: 43.256, lng: 13.759 },
+						zoom: 13,
+						// scrollwheel: false,
+						streetViewControl: false,
+						fullscreenControl: false,
+						styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
+				    });
+
+				    // categorie: 0 dove dormire, 1 campo di gioco
+
+				    var locations = [
+				    	{ id: 0, name: "B&B Villa Rosa", category: 0, lat: 43.272878, lng: 13.747742 },
+				    	{ id: 1, name: "Hotel Belvedere", category: 0, lat: 43.266424, lng: 13.753576 },
+				    	{ id: 2, name: "Le Mimose", category: 0, lat: 43.237831, lng: 13.773183 },
+				    	{ id: 3, name: "B&B Girovagando", category: 0, lat: 43.252869, lng: 13.756206 },
+				    	{ id: 4, name: "B&B Il Tiglio", category: 0, lat: 43.252739, lng: 13.756319 },
+				    	{ id: 5, name: "Hotel Il Timone", category: 0, lat: 43.169590, lng: 13.803565 },
+				    	{ id: 6, name: "B&B Terrazza Sul Mare", category: 0, lat: 43.264214, lng: 13.755190 },
+				    	{ id: 7, name: "La Risacca", category: 0, lat: 43.286671, lng: 13.744260 },
+				    	{ id: 8, name: "Mountain Bike Campo A", category: 1, lat: 43.248096, lng: 13.767322 },
+				    	{ id: 9, name: "Mountain Bike Campo B", category: 1, lat: 43.247373, lng: 13.767720 },
+				    	{ id: 10, name: "Mountain Bike Campo C", category: 1, lat: 43.247373, lng: 13.766385 },
+				    	{ id: 11, name: "Sprint", category: 1, lat: 43.248432, lng: 13.766257 },
+				    	{ id: 12, name: "Gincana", category: 1, lat: 43.248803, lng: 13.767715 },
+				    	{ id: 13, name: "Strada Percorso A", category: 1, lat: 43.245871, lng: 13.769601 },
+				    	{ id: 14, name: "Strada Percorso B", category: 1, lat: 43.241104, lng: 13.772805 },
+				    	{ id: 15, name: "Parcheggio A", category: 2, lat: 43.257334, lng: 13.760789 },
+				    	{ id: 16, name: "Parcheggio B", category: 2, lat: 43.256376, lng: 13.761624 },
+				    	{ id: 17, name: "Parcheggio C", category: 2, lat: 43.247198, lng: 13.765860 },
+				    	{ id: 18, name: "Parcheggio D", category: 2, lat: 43.235792, lng: 13.773019 },
+				    	{ id: 19, name: "Diamond Palace Loriblu", category: 3, lat: 43.233177, lng: 13.749899 },
+				    	{ id: 20, name: "Rotonda Lungomare Centro", category: 3, lat: 43.259521, lng: 13.760178 },
+				    ];
+
+				    var categories = [
+				    	{ name: "dove_dormire", unicode: '\uf236' },
+				    	{ name: "campo_di_gioco", unicode: '\uf206' },
+				    	{ name: "parcheggi", unicode: '\uf1b9' },
+				    	{ name: "eventi", unicode: '\uf02e' },
+				    ];
+
+					var image = {
+						url: '{{ site.baseurl }}/assets/images/map_icon.png',
+						// This marker is 20 pixels wide by 32 pixels high.
+						size: new google.maps.Size(64, 64),
+						scaledSize: new google.maps.Size(64, 64),
+						// The origin for this image is (0, 0).
+						origin: new google.maps.Point(0, 0),
+						// The anchor for this image is the base of the flagpole at (0, 32).
+						anchor: new google.maps.Point(18, 34)
+					};	
+
+					var imageSelected = {
+						url: '{{ site.baseurl }}/assets/images/map_selected_icon.png',
+						// This marker is 20 pixels wide by 32 pixels high.
+						size: new google.maps.Size(64, 64),
+						scaledSize: new google.maps.Size(64, 64),
+						// The origin for this image is (0, 0).
+						origin: new google.maps.Point(0, 0),
+						// The anchor for this image is the base of the flagpole at (0, 32).
+						anchor: new google.maps.Point(18, 34)
+					};
+
+					var labelColor = function(category_index) {
+						return {
+							fontFamily: 'Fontawesome',
+							text: categories[category_index].unicode,
+							color: "#1c8ce3"
+						}
+					}
+
+					var selectedLabelColor = function(category_index) {
+						return {
+							fontFamily: 'Fontawesome',
+							text: categories[category_index].unicode,
+							color: "#fff"
+						}
+					}
+
+					var markers = []
+
+					var markerMouseover = function(marker) {
+						marker.setIcon(imageSelected);
+						marker.setLabel(selectedLabelColor(marker.category_index));
+						$("#" + marker.location_id).addClass("highlighted");
+					}	    
+
+					var markerMouseout = function(marker) {
+						marker.setIcon(image);
+						marker.setLabel(labelColor(marker.category_index));
+						$("#" + marker.location_id).removeClass("highlighted");		
+					}
+
+					var markerClick = function(marker) {
+						$("#" + marker.location_id).find("a")[0].click();	
+					}	
+
+				    for (var i = 0; i < locations.length; i++) {
+						var marker = new google.maps.Marker({
+							position: { lat: locations[i].lat, lng: locations[i].lng },
+							map: map,
+							label: {
+								fontFamily: 'Fontawesome',
+								text: categories[locations[i].category].unicode,
+								color: "#1c8ce3"
+							},
+							icon: image,
+							title: locations[i].name,
+							category_index: locations[i].category,
+							location_id: locations[i].id
+						});					
+
+						google.maps.event.addListener(marker, 'mouseover', function() {
+							markerMouseover(this);
+						});
+
+						google.maps.event.addListener(marker, 'mouseout', function() {
+							markerMouseout(this);
+						});
+
+						google.maps.event.addListener(marker, 'click', function() {
+							markerClick(this);
+						});
+
+						markers.push(marker);			
+				    }
+
+				    var indexOfId = function(id) {
+						return locations.map(function(o) { return o.id; }).indexOf(id);		    	
+				    }
+
+					$(".single-feature").mouseover(function() {
+						markerMouseover(markers[indexOfId(parseInt($(this).attr("id")))]);
+					});
+
+					$(".single-feature").mouseout(function() {
+						markerMouseout(markers[indexOfId(parseInt($(this).attr("id")))]);
+					});
+
+					$(".single-feature").click(function() {
+						var latLng = markers[indexOfId(parseInt($(this).attr("id")))].getPosition();
+						map.setCenter(latLng);
+						map.setZoom(15);
+						$("#map").siblings("a")[0].click();
+					});
+
+					// Intialize the Path Array
+					var percorsoA = new google.maps.MVCArray();
+					var percorsoB = new google.maps.MVCArray();
+
+					// Intialize the Direction Service
+					var service = new google.maps.DirectionsService();
+
+					// Set the Path Stroke Color
+					var polyA = new google.maps.Polyline({
+						map: map,
+						strokeColor: '#1c8ce3'
+					});
+
+					var polyB = new google.maps.Polyline({
+						map: map,
+						strokeColor: '#1c8ce3'
+					});					
+
+					percorso_strada_a = [
+						new google.maps.LatLng(43.245886, 13.769601),
+						new google.maps.LatLng(43.245706, 13.769087),
+						new google.maps.LatLng(43.242713, 13.770805),
+						new google.maps.LatLng(43.242924, 13.771519),
+						new google.maps.LatLng(43.245886, 13.769601)
+					];
+
+					percorso_strada_b = [
+						new google.maps.LatLng(43.237064, 13.772371),
+						new google.maps.LatLng(43.239299, 13.771017),
+						new google.maps.LatLng(43.239665, 13.772325),
+						new google.maps.LatLng(43.240744, 13.771700),
+						new google.maps.LatLng(43.241104, 13.772805),
+						new google.maps.LatLng(43.237064, 13.772371)
+					];
+
+					// Loop and Draw Path Route between the Points on MAP
+					// percorso A
+					for (var i = 0; i < percorso_strada_a.length; i++) {
+						if ((i + 1) < percorso_strada_a.length) {
+							var src = percorso_strada_a[i];
+							var des = percorso_strada_a[i + 1];
+							polyA.setPath(percorsoA);
+
+							service.route({
+								origin: src,
+								destination: des,
+								travelMode: google.maps.DirectionsTravelMode.DRIVING
+							}, function(result, status) {
+								if (status == google.maps.DirectionsStatus.OK) {
+									for (var i = 0, len = result.routes[0].overview_path.length; i < len; i++) {
+										percorsoA.push(result.routes[0].overview_path[i]);
+									}
+								}
+							});
+						}
+					}
+
+					// percorso B
+					for (var i = 0; i < percorso_strada_b.length; i++) {
+						if ((i + 1) < percorso_strada_b.length) {
+							var src = percorso_strada_b[i];
+							var des = percorso_strada_b[i + 1];
+							polyB.setPath(percorsoB);
+
+							service.route({
+								origin: src,
+								destination: des,
+								travelMode: google.maps.DirectionsTravelMode.DRIVING
+							}, function(result, status) {
+								if (status == google.maps.DirectionsStatus.OK) {
+									for (var i = 0, len = result.routes[0].overview_path.length; i < len; i++) {
+										percorsoB.push(result.routes[0].overview_path[i]);
+									}
+								}
+							});
+						}
+					}									
+				});	    		    
+			}
 		</script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgCP_oxgz2IRDYZYvisAmOzFZuHXUDHF8&callback=initMap"
 		async defer></script>
 	</div>
 	<div class="col-md-9"></div>
+
 	<div class="col-md-3 features-list">
 		<h3>Alberghi</h3>
 		<div class="features-sub-list">
-			<div class="row single-feature">
+			<div id="0" class="row single-feature">
+				<a href="#0"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>B&B Villa Rosa</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Bed and Breakfast</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row single-feature">
+			<div id="1" class="row single-feature">
+				<a href="#1"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>Hotel Belvedere</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Hotel <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row single-feature">
+			<div id="2" class="row single-feature">
+				<a href="#2"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>Le Mimose</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Villaggio turistico <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="3" class="row single-feature">
+				<a href="#3"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B Girovagando</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="4" class="row single-feature">
+				<a href="#4"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B Il Tiglio</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="5" class="row single-feature">
+				<a href="#5"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Hotel Il Timone</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Hotel <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="6" class="row single-feature">
+				<a href="#6"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B Terrazza Sul Mare</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="7" class="row single-feature">
+				<a href="#7"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>La Risacca</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Villaggio turistico <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h3>Ristoranti</h3>
+		<h3>Campi di Gioco</h3>
 		<div class="features-sub-list">
-			<div class="row single-feature">
+			<div id="8" class="row single-feature">
+				<a href="#8"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>Mountain Bike Area A</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Mountain Bike</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row single-feature">
+			<div id="9" class="row single-feature">
+				<a href="#9"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>Mountain Bike Area B</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Mountain Bike</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row single-feature">
+			<div id="10" class="row single-feature">
+				<a href="#10"></a>
 				<!--<div class="col-xs-4 vcenter">
 					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
 				</div>--><!--
 				--><div class="col-xs-12 text vcenter">
 					<div class="row">
 						<div class="col-xs-12">
-							<h5>Gran Ristorante Gambero</h5>
+							<h5>Mountain Bike Area C</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p>Un esponente esemplare della cucina Marchigiana.</p>
+							<p>Mountain Bike</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>		
+			<div id="11" class="row single-feature">
+				<a href="#11"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Sprint</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Sprint</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="12" class="row single-feature">
+				<a href="#12"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Gincana</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Gincana</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="13" class="row single-feature">
+				<a href="#13"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Circuito Strada A</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Strada</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="14" class="row single-feature">
+				<a href="#14"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Circuito Strada B</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Strada</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>Parcheggi</h3>
+		<div class="features-sub-list">
+			<div id="15" class="row single-feature">
+				<a href="#15"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Parcheggio A</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Strada</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="16" class="row single-feature">
+				<a href="#16"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Parcheggio B</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Strada</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="17" class="row single-feature">
+				<a href="#17"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Parcheggio C</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Strada</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="18" class="row single-feature">
+				<a href="#18"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Parcheggio D</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Parcheggio</p>
+						</div>
+					</div>
+				</div>
+			</div>									
+		</div>
+		<h3>Eventi</h3>
+		<div class="features-sub-list">
+			<div id="19" class="row single-feature">
+				<a href="#19"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Diamond Palace Loriblu</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Operazioni di punzonatura, Giovedì 15 giugno 2017</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="20" class="row single-feature">
+				<a href="#20"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Rotonda Lungomare Centro</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Premiazioni Finali e spettacoli serali</p>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>					
 	</div>
 </div>

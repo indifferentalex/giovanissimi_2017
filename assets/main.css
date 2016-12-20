@@ -12,6 +12,7 @@ a {
 
 p {
 	font-family: 'Quattrocento', serif;
+	font-size: 16px;
 }
 
 p a {
@@ -128,8 +129,16 @@ button.navbar-toggle {
 	margin-bottom: 36px;
 }
 
+.row.centerpiece h1 {
+	margin-bottom: 36px;
+}
+
 .row.centerpiece img {
 	width: 100%;
+}
+
+.row.centerpiece img.centerpiece {
+	padding: 36px;
 }
 
 .main-content .gallery-row {
@@ -173,7 +182,15 @@ button.navbar-toggle {
 	padding: 0px;
 }
 
+@media (max-width: 992px) {
+	.map-column {
+		position: relative;
+		margin-bottom: 12px;
+	}
+}
+
 .features-list {
+	min-height: 100vh;
 	padding: 0px;
 }
 
@@ -190,8 +207,17 @@ button.navbar-toggle {
 }
 
 .features-list .row.single-feature {
+	cursor: pointer;
 	margin-bottom: 12px;
 	padding: 0px 24px;
+}
+
+.features-list .row.single-feature.highlighted h5 {
+	color: #1c8ce3;
+}
+
+.features-list .row.single-feature.highlighted p {
+	color: #1c8ce3;
 }
 
 .features-list .row.single-feature:last-child .text {
@@ -217,6 +243,12 @@ button.navbar-toggle {
 	padding: 0px 72px;
 	margin-top: 36px;
 	background: #e0e0e0;
+}
+
+@media (max-width: 992px) {
+	.footer-links {
+		padding: 0px 24px;
+	}
 }
 
 .footer-links.map-footer {

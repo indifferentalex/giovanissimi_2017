@@ -260,6 +260,11 @@ button.navbar-toggle {
 	list-style: none;
 }
 
+.footer-links li {
+	font-family: 'Fjalla One', sans-serif;
+	color: #1c8ce3;
+}
+
 .footer-links a {
 	color: #1c8ce3;
 }
@@ -271,4 +276,10 @@ button.navbar-toggle {
 .final-footer-text {
 	margin-top: 36px;
 	text-align: center;
+}
+
+.final-footer-text a {
+	cursor: pointer;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #9c9c9c;
 }

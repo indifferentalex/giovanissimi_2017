@@ -109,6 +109,52 @@ button.navbar-toggle {
 	color: #1c8ce3;
 }
 
+/* https://codepen.io/bootstrapped/pen/KwYGwq start */
+/* EXAMPLE 8 - Center Background */
+.navbar-brand {
+	padding: 0px;
+	width: 200px;
+	margin: 12px 0px;
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+}
+
+.navbar-brand>img {
+	height: 100%;
+	padding: 15px;
+	width: auto;
+}
+
+/* EXAMPLE 8 - Center on mobile*/
+@media only screen and (max-width : 992px) {
+	.navbar-brand {
+		margin-top: 6px;
+		margin-bottom: 0px;
+		padding: 0px;
+		transform: translateX(-50%);
+		left: 50%;
+		position: absolute;
+	}
+
+	.navbar-brand>img {
+		height: 100%;
+		width: auto;
+		padding: 7px 14px; 
+	}
+}
+/* https://codepen.io/bootstrapped/pen/KwYGwq end */
+
+.navbar-right {
+	margin-right: 72px;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar-right {
+		margin-right: 0px;
+	}
+}
+
 .main-content {
 	padding: 0px 24px;
 	background: #fff;

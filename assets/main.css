@@ -101,7 +101,7 @@ nav.navbar {
 	padding: 12px 22px;
 }
 
-.navbar ul.navbar-nav li .main-site-logo object {
+.navbar a.main-site-logo.navbar-brand object {
 	height: 44px;
 	pointer-events: none;
 }
@@ -154,12 +154,6 @@ button.navbar-toggle {
 	position: absolute;
 }
 
-.navbar-brand>img {
-	height: 100%;
-	padding: 15px;
-	width: auto;
-}
-
 /* EXAMPLE 8 - Center on mobile*/
 @media only screen and (max-width : 992px) {
 	.navbar-brand {
@@ -169,12 +163,6 @@ button.navbar-toggle {
 		transform: translateX(-50%);
 		left: 50%;
 		position: absolute;
-	}
-
-	.navbar-brand>img {
-		height: 100%;
-		width: auto;
-		padding: 7px 14px; 
 	}
 }
 /* https://codepen.io/bootstrapped/pen/KwYGwq end */

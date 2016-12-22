@@ -19,12 +19,46 @@ p a {
 	font-family: 'Quattrocento', serif;	
 }
 
-.storia-list {
+.la-storia img.very-small-frame {
+	padding: 10%;
+}
+
+.la-storia img.small-frame {
+	padding: 15%;
+}
+
+.la-storia img.medium-frame {
+	padding: 20%;
+}
+
+.la-storia img.large-frame {
+	padding: 25%;
+}
+
+@media (max-width: 992px) {
+	.la-storia img.very-small-frame {
+		padding: 0px;
+	}
+
+	.la-storia img.small-frame {
+		padding: 0px;
+	}
+
+	.la-storia img.medium-frame {
+		padding: 0px;
+	}
+
+	.la-storia img.large-frame {
+		padding: 0px;
+	}
+}
+
+.la-storia ul {
 	padding: 0px;
 	list-style: none;
 }
 
-.storia-list li {
+.la-storia ul li {
 	font-family: 'Quattrocento', serif;	
 	font-size: 16px;
 	margin-bottom: 12px;

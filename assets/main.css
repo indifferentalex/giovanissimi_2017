@@ -1,3 +1,5 @@
+/* base: #1c8ce3, dark: #1470b7 */
+
 body {
 	background: #fff;
 }
@@ -315,6 +317,123 @@ button.navbar-toggle {
 .features-list .row.single-feature .text div {
 	padding: 0px;
 }
+
+.hotels .centerpiece h1 {
+	margin-bottom: 12px;
+}
+
+.hotels .centerpiece h2 {
+	margin-top: 12px;
+	margin-bottom: 24px;
+}
+
+.hotels .listing {
+	padding: 24px 0px;
+}
+
+.hotels .listing .image-column {
+	padding-left: 0px;
+}
+
+@media (max-width: 992px) {
+	.hotels .listing .image-column {
+		padding-left: 15px;
+		margin-bottom: 12px;
+	}
+}
+
+.hotels .listing .main-info-column h3 {
+	margin-top: 0px;
+}
+
+.hotels .listing .main-info-column .address {
+	font-size: 14px;
+	color: #555;
+}
+
+.hotels .listing .side-info-column {
+	text-align: center;
+	padding-right: 0px;
+}
+
+@media (max-width: 992px) {
+	.hotels .listing .side-info-column {
+		margin-top: 24px;
+	}
+}
+
+.hotels .listing .side-info-column p {
+	font-family: 'Fjalla One', sans-serif;
+	color: #555;
+	margin: 0px;
+}
+
+.hotels .listing .side-info-column h2 {
+	color: #1c8ce3;
+	margin: 6px 0px;
+}
+
+.hotels .listing .side-info-column a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.hotels .listing .side-info-column .book-button {
+	color: #fff;
+	margin-top: 24px;
+	padding: 12px;
+	background: #1c8ce3;
+	border-radius: 5px;
+}
+
+.hotels .listing .side-info-column .book-button:hover {
+	background: #1470b7;
+}
+
+.hotels .listing.top-border {
+	border-top: 1px solid #e0e0e0;
+}
+
+.hotels .listing.bottom-border {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.hotels .hotels-footer .row.centerpiece {
+	margin-bottom: -36px;
+}
+
+.hotels .hotels-footer img.centerpiece {
+	padding: 0px 20%;
+}
+
+.hotels .hotels-footer .centerpiece-text {
+	text-align: center;
+}
+
+.hotels .hotels-footer .row.contact-information {
+	margin-top: 0px;
+}
+
+.hotels .hotels-footer .contact-information {
+	padding: 0px;
+}
+
+.hotels .hotels-footer .contact-information .contact-profile {
+	margin-top: 0px;
+	margin-bottom: 36px;
+}
+
+.hotels .hotels-footer .contact-information p {
+	/*font-size: 18px;*/
+	margin: 0px;
+}
+
+.hotels .hotels-footer .contact-information p.title {
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 12px;
+}
+
 
 .footer-links {
 	position: relative;

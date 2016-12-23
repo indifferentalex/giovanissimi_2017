@@ -155,7 +155,7 @@ button.navbar-toggle {
 /* EXAMPLE 8 - Center Background */
 .navbar-brand {
 	padding: 0px;
-	width: 200px;
+	width: auto;
 	margin: 8px 0px;
 	transform: translateX(-50%);
 	left: 15%;

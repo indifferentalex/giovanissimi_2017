@@ -104,8 +104,14 @@ nav.navbar {
 }
 
 .navbar a.main-site-logo.navbar-brand object {
-	height: 44px;
+	height: 54px;
 	pointer-events: none;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar a.main-site-logo.navbar-brand object {
+		height: 44px;
+	}
 }
 
 .navbar .navbar-collapse {
@@ -123,7 +129,7 @@ button.navbar-toggle {
 }
 
 .navbar ul.navbar-nav li {
-	
+	font-size: 18px;
 }
 
 .navbar ul.navbar-nav li:first-child {
@@ -150,7 +156,7 @@ button.navbar-toggle {
 .navbar-brand {
 	padding: 0px;
 	width: 200px;
-	margin: 12px 0px;
+	margin: 8px 0px;
 	transform: translateX(-50%);
 	left: 15%;
 	position: absolute;

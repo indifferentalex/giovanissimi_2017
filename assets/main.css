@@ -67,14 +67,14 @@ p a {
 }
 
 .vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
 }
 
 .vertical-align {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .top-bar {

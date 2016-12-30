@@ -21,7 +21,15 @@ permalink: /cartina/
 						styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
 				    });
 
-				    // categorie: 0 dove dormire, 1 campo di gioco
+				    // categorie: 0 dove dormire, 1 campo di gioco, 2 parcheggi, 3 eventi
+
+				    var zoomLevelByCategory = function(category) {
+				    	if (category == 1) { // campo di gioco
+				    		return 17;
+				    	} else {
+				    		return 15;
+				    	}
+				    }
 
 				    var locations = [
 				    	// { id: 0, name: "B&B Villa Rosa", category: 0, lat: 43.272878, lng: 13.747742 },
@@ -31,10 +39,11 @@ permalink: /cartina/
 				    	// { id: 4, name: "B&B Il Tiglio", category: 0, lat: 43.252739, lng: 13.756319 },
 				    	{ id: 5, name: "Hotel Il Timone", category: 0, lat: 43.169590, lng: 13.803565 },
 				    	{ id: 6, name: "Hotel Pineta", category: 0, lat: 43.269634, lng: 13.755210 },
-				    	// { id: 6, name: "B&B Terrazza Sul Mare", category: 0, lat: 43.264214, lng: 13.755190 },
+				    	{ id: 77, name: "B&B Terrazza Sul Mare", category: 0, lat: 43.264214, lng: 13.755190 },
 				    	{ id: 7, name: "La Risacca", category: 0, lat: 43.286671, lng: 13.744260 },
 				    	{ id: 21, name: "La Rosa dei Venti", category: 0, lat: 43.237527, lng: 13.590681 },
 				    	{ id: 22, name: "Hotel San Crispino", category: 0, lat: 43.268673, lng: 13.581725 },
+				    	{ id: 45, name: "Centro Turistico Holiday", category: 0, lat: 43.272625, lng: 13.752471 },
 				    	{ id: 8, name: "Mountain Bike Campo A", category: 1, lat: 43.248096, lng: 13.767322 },
 				    	{ id: 9, name: "Mountain Bike Campo B", category: 1, lat: 43.247373, lng: 13.767720 },
 				    	{ id: 10, name: "Mountain Bike Campo C", category: 1, lat: 43.247373, lng: 13.766385 },
@@ -100,7 +109,6 @@ permalink: /cartina/
 					var markerMouseover = function(marker) {
 						marker.setIcon(imageSelected);
 						marker.setLabel(selectedLabelColor(marker.category_index));
-						console.log(marker.location_id);
 						$("#" + marker.location_id).addClass("highlighted");
 					}	    
 
@@ -159,7 +167,7 @@ permalink: /cartina/
 					$(".single-feature").click(function() {
 						var latLng = markers[indexOfId(parseInt($(this).attr("id")))].getPosition();
 						map.setCenter(latLng);
-						map.setZoom(15);
+						map.setZoom(zoomLevelByCategory(markers[indexOfId(parseInt($(this).attr("id")))].category_index));
 						$("#map").siblings("a")[0].click();
 					});
 
@@ -268,7 +276,25 @@ permalink: /cartina/
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
+			<div id="45" class="row single-feature">
+				<a href="#45"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Centro Turistico Holiday</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Villaggio turistico <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>				
 			<div id="2" class="row single-feature">
 				<a href="#2"></a>
 				<!--<div class="col-xs-4 vcenter">
@@ -305,6 +331,24 @@ permalink: /cartina/
 					</div>
 				</div>
 			</div>
+			<div id="77" class="row single-feature">
+				<a href="#77"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B La Terrazza sul Mare</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>			
 			<div id="7" class="row single-feature">
 				<a href="#7"></a>
 				<!--<div class="col-xs-4 vcenter">

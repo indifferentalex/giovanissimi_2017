@@ -21,6 +21,8 @@ permalink: /cartina/
 						styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
 				    });
 
+				    // ,{"featureType":"road","elementType":"labels","stylers":[{"visibility": "off"}]}
+
 				    // categorie: 0 dove dormire, 1 campo di gioco, 2 parcheggi, 3 eventi
 
 				    var zoomLevelByCategory = function(category) {
@@ -181,12 +183,14 @@ permalink: /cartina/
 					// Set the Path Stroke Color
 					var polyA = new google.maps.Polyline({
 						map: map,
-						strokeColor: '#1c8ce3'
+						strokeColor: '#1c8ce3',
+						strokeOpacity: 0.35
 					});
 
 					var polyB = new google.maps.Polyline({
 						map: map,
-						strokeColor: '#1c8ce3'
+						strokeColor: '#1c8ce3',
+						strokeOpacity: 0.35
 					});					
 
 					percorso_strada_a = [

@@ -117,17 +117,6 @@ nav.navbar {
 	}
 }
 
-.navbar a.main-site-logo.navbar-brand img {
-	height: 54px;
-	pointer-events: none;
-}
-
-@media only screen and (max-width : 992px) {
-	.navbar a.main-site-logo.navbar-brand img {
-		height: 44px;
-	}
-}
-
 .navbar .navbar-collapse {
   text-align: center;
   border: none;
@@ -152,8 +141,14 @@ button.navbar-toggle {
 
 .navbar ul.navbar-nav li a {
 	color: #1c8ce3;
-	padding: 24px 22px;
+	padding: 64px 22px;
 	text-shadow: none;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar ul.navbar-nav li a {
+		padding: 24px 22px;
+	}
 }
 
 .navbar ul.navbar-nav li:hover {
@@ -170,10 +165,38 @@ button.navbar-toggle {
 .navbar-brand {
 	padding: 0px;
 	width: auto;
+	height: auto;
 	margin: 8px 0px;
-	transform: translateX(-50%);
-	left: 15%;
+	margin-bottom: 36px;
+	/*transform: translateX(-50%);*/
+	left: 39px;
 	position: absolute;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	margin-left: 0px;
+}
+
+.navbar a.main-site-logo.navbar-brand img {
+	height: 120px;
+	pointer-events: none;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar a.main-site-logo.navbar-brand {
+		display: block;
+		float: none;
+		margin: 8px auto;
+		left: 0px;
+		width: 60%;
+		height: auto;
+		position: static;
+	}
+
+	.navbar a.main-site-logo.navbar-brand img {
+		width: 100%;
+		height: auto;
+	}	
 }
 
 /* EXAMPLE 8 - Center on mobile*/
@@ -182,8 +205,8 @@ button.navbar-toggle {
 		margin-top: 6px;
 		margin-bottom: 0px;
 		padding: 0px;
-		transform: translateX(-50%);
-		left: 50%;
+/*		transform: translateX(-50%);
+		left: 50%;*/
 		position: absolute;
 	}
 }
@@ -274,6 +297,7 @@ ul.dropdown-menu {
 }
 
 .row.centerpiece {
+	margin-top: 0px;
 	margin-bottom: 36px;
 }
 

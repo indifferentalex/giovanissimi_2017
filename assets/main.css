@@ -88,9 +88,12 @@ p a {
 }
 
 nav.navbar {
+	position: relative;
+	z-index: 100;
 	margin-bottom: 0px;
 	background: #fff;
 	border: none;
+	box-shadow: none;	
 }
 
 .navbar .navbar-nav {
@@ -104,12 +107,23 @@ nav.navbar {
 }
 
 .navbar a.main-site-logo.navbar-brand object {
-	height: 54px;
+	height: 108px;
 	pointer-events: none;
 }
 
 @media only screen and (max-width : 992px) {
 	.navbar a.main-site-logo.navbar-brand object {
+		height: 88px;
+	}
+}
+
+.navbar a.main-site-logo.navbar-brand img {
+	height: 54px;
+	pointer-events: none;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar a.main-site-logo.navbar-brand img {
 		height: 44px;
 	}
 }
@@ -124,7 +138,7 @@ button.navbar-toggle {
 	border: none;
 }
 
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+.navbar-default button.navbar-toggle:focus, .navbar-default button.navbar-toggle:hover {
 	background: #1c8ce3;
 }
 
@@ -146,7 +160,7 @@ button.navbar-toggle {
 	
 }
 
-.navbar ul.navbar-nav li:hover a {
+.navbar ul.navbar-nav li:hover a.main-link {
 	text-decoration: underline;
 	color: #1c8ce3;
 }
@@ -182,6 +196,53 @@ button.navbar-toggle {
 @media only screen and (max-width : 992px) {
 	.navbar-right {
 		margin-right: 0px;
+	}
+}
+
+.navbar .navbar-nav a {
+	color: #1c8ce3;
+}
+
+.navbar .dropdown.open a.dropdown-toggle {
+	color: #1c8ce3;
+	background: none;
+	box-shadow: none;
+}
+
+.navbar .dropdown.open a.dropdown-toggle:focus {
+	color: #1c8ce3;
+}
+
+.navbar .dropdown-menu {
+	border: none;
+}
+
+.navbar .dropdown-menu li a:hover {
+	color: #1c8ce3;
+	text-decoration: underline;
+	background: none;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:active, .navbar-default .navbar-nav>.open>a:hover {
+	color: #1c8ce3;
+}
+
+.navbar .navbar-nav li.dropdown a {
+	color: #1c8ce3;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+ul.dropdown-menu {
+	text-align: center;
+}
+
+@media only screen and (max-width : 992px) {
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		padding: 7px 15px;
+		color: #1c8ce3;
 	}
 }
 

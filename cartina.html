@@ -33,10 +33,31 @@ permalink: /cartina/
 				    	}
 				    }
 
+			        var contentString = function(header, content, footer) {
+			        	return '<div id="content">'+
+			            '<div id="siteNotice">'+
+			            '</div>'+
+			            '<h1 id="firstHeading" class="firstHeading">' + header + '</h1>'+
+			            '<div id="bodyContent">'+
+			            '<p>' + content + '</p>'+
+			            '<p>' + footer + '</p>'+
+			            '</div>'+
+			            '</div>';
+			        }
+
+			        var infowindow = new google.maps.InfoWindow({
+			          content: contentString("Hello")
+			        });				    
+
 				    var locations = [
 				    	// { id: 0, name: "B&B Villa Rosa", category: 0, lat: 43.272878, lng: 13.747742 },
-				    	{ id: 1, name: "Hotel Belvedere", category: 0, lat: 43.266424, lng: 13.753576 },
+				    	{ id: 1, name: "Hotel Belvedere", description: "Benvenuti nel nostro hotel per un lieto soggiorno a Porto Sant'Elpidio. L'albergo si trova in una posizione eccellente per gli amanti delle passeggiate estive: a pochi metri dal mare e dalla pineta che ne costeggia il litorale ed in prossimita di una splendida villa comunale del '900 ed il suo parco di alberi centenari. Dalle finestre dell'albergo si ammira il panorama che spazia dalle verdi colline circostanti, al mare con una visuale che permette di intravedere il Monte Conero a nord.", footer: '<a href="#">Visita il sito</a> o chiama al +39 0734 991712', category: 0, lat: 43.266424, lng: 13.753576 },
 				    	{ id: 2, name: "Le Mimose", category: 0, lat: 43.237831, lng: 13.773183 },
+
+				    	{ id: 30, name: "B&B Casa Anna Maria", category: 0, lat: 43.283352, lng: 13.736493 },
+				    	{ id: 31, name: "Hotel Garden", category: 0, lat: 43.181383, lng: 13.796701 },
+				    	{ id: 32, name: "B&B A Casa di Pina", category: 0, lat: 43.268290, lng: 13.755357 },
+
 				    	// { id: 3, name: "B&B Girovagando", category: 0, lat: 43.252869, lng: 13.756206 },
 				    	// { id: 4, name: "B&B Il Tiglio", category: 0, lat: 43.252739, lng: 13.756319 },
 				    	{ id: 5, name: "Hotel Il Timone", category: 0, lat: 43.169590, lng: 13.803565 },
@@ -124,7 +145,12 @@ permalink: /cartina/
 					}
 
 					var markerClick = function(marker) {
-						$("#" + marker.location_id).find("a")[0].click();	
+						$("#" + marker.location_id).find("a")[0].click();
+						infowindow.close();
+						if (marker.description) {
+							infowindow.setContent(contentString(marker.title, marker.description, marker.footer));
+	          				infowindow.open(map, marker);
+	          			}	
 					}	
 
 				    for (var i = 0; i < locations.length; i++) {
@@ -138,6 +164,8 @@ permalink: /cartina/
 							},
 							icon: image,
 							title: locations[i].name,
+							description: locations[i].description ? locations[i].description : "",
+							footer: locations[i].footer ? locations[i].footer : "",
 							category_index: locations[i].category,
 							location_id: locations[i].id
 						});			
@@ -446,6 +474,62 @@ permalink: /cartina/
 					</div>
 				</div>
 			</div>
+
+			<div id="30" class="row single-feature">
+				<a href="#30"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B Casa Anna Maria</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="31" class="row single-feature">
+				<a href="#31"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Hotel Garden</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Hotel <i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="32" class="row single-feature">
+				<a href="#32"></a>
+				<!--<div class="col-xs-4 vcenter">
+					<img src="{{ site.baseurl }}/assets/images/golden_ratio_placeholder.jpg"/>
+				</div>--><!--
+				--><div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>B&B A Casa di Pina</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Bed and Breakfast</p>
+						</div>
+					</div>
+				</div>
+			</div>						
+
 			<div id="78" class="row single-feature">
 				<a href="#78"></a>
 				<!--<div class="col-xs-4 vcenter">

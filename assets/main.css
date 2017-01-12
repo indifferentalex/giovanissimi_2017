@@ -131,6 +131,10 @@ button.navbar-toggle {
 	background: #1c8ce3;
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+	color: #1c8ce3;
+}
+
 .navbar ul.navbar-nav li {
 	font-size: 18px;
 }
@@ -155,7 +159,7 @@ button.navbar-toggle {
 	
 }
 
-.navbar ul.navbar-nav li:hover a.main-link {
+.navbar ul.navbar-nav li:hover>a.main-link {
 	text-decoration: underline;
 	color: #1c8ce3;
 }
@@ -258,13 +262,26 @@ button.navbar-toggle {
 	background-color: #fff;
 }
 
-ul.dropdown-menu {
+li.dropdown.open ul.dropdown-menu {
+	left: 0px;
 	text-align: center;
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu {
+	margin-top: -32px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	padding: 24px 42px;
+}
+
 @media only screen and (max-width : 992px) {
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		margin-top: 0px;
+	}
+
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
-		padding: 7px 15px;
+		padding: 8px 15px;
 		color: #1c8ce3;
 	}
 }

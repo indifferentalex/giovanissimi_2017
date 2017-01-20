@@ -263,6 +263,7 @@ button.navbar-toggle {
 }
 
 li.dropdown.open ul.dropdown-menu {
+	width: 200px;
 	left: 0px;
 	text-align: center;
 }
@@ -272,7 +273,7 @@ li.dropdown.open ul.dropdown-menu {
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-	padding: 24px 42px;
+	padding: 24px 0px;
 }
 
 @media only screen and (max-width : 992px) {

@@ -21,6 +21,24 @@ p a {
 	font-family: 'Quattrocento', serif;	
 }
 
+@media only screen and (min-width : 992px) {
+	.very-small-frame {
+		padding: 10%;
+	}
+
+	.small-frame {
+		padding: 15%;
+	}
+
+	.medium-frame {
+		padding: 20%;
+	}
+
+	.large-frame {
+		padding: 25%;
+	}
+}
+
 .la-storia img.very-small-frame {
 	padding: 10%;
 }
@@ -285,6 +303,12 @@ li.dropdown.open ul.dropdown-menu {
 		padding: 8px 15px;
 		color: #1c8ce3;
 	}
+}
+
+p.image-alt-text {
+	font-size: 12px;
+	color: #999;
+	padding: 9px 0px;
 }
 
 .main-content {

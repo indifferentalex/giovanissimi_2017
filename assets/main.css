@@ -523,6 +523,15 @@ p.image-alt-text {
 	background: #1470b7;
 }
 
+.hotels .listing .side-info-column.disabled h2 {
+	color: #888;
+}
+
+.hotels .listing .side-info-column.disabled .book-button {
+	cursor: no-drop;
+	background: #888;
+}
+
 .hotels .listing.top-border {
 	border-top: 1px solid #e0e0e0;
 }

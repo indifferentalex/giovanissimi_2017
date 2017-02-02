@@ -577,6 +577,23 @@ p.image-alt-text {
 	margin-bottom: 12px;
 }
 
+.articles-list a .article-row {
+	padding-bottom: 36px;
+	border-bottom: 1px solid #eee;
+}
+
+.articles-list a:last-child .article-row {
+	border-bottom: none;
+}
+
+.article-content h1 {
+	margin: 36px 0px;
+}
+
+.article-content p {
+	font-size: 18px;
+	margin: 24px 0px;
+}
 
 .footer-links {
 	position: relative;

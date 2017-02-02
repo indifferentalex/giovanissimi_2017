@@ -15,6 +15,23 @@ description: Benvenuti a Porto Sant'Elpidio, la cittadina sul litorale Marchigia
 		<p><i>"La città che ha il mare e la bici nel cuore"</i></p>
 	</div>
 </div>
+
+<div class="articles-list">
+{% for post in site.posts %}
+	<a href="{{ post.url }}">
+		<div class="row article-row">
+			<div class="col-md-3 col-md-push-9 vcenter">
+				<img  alt="L'assessore allo sport di Porto Sant'Elpidio Milena Sebastiani ad Alba" src="{{ site.baseurl }}/assets/images/pse_alba_2.jpg"/>
+			</div><!--
+			--><div class="col-md-9 col-md-pull-3 vcenter">
+				<h3>{{ post.title }}</h3>
+				<p>{{ post.description }}..</p>
+			</div>	
+		</div>
+	</a>
+{% endfor %}
+</div>
+
 <!-- 
 <div class="row">
 	<div class="col-md-4">

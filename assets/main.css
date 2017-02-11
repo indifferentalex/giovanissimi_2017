@@ -577,6 +577,44 @@ p.image-alt-text {
 	margin-bottom: 12px;
 }
 
+.restaurants .row.listing .row {
+	margin-top: 0px;
+}
+
+.restaurants .listing {
+	padding: 24px 0px;
+}
+
+.restaurants .listing .image-column {
+	padding-left: 0px;
+}
+
+@media (max-width: 992px) {
+	.restaurants .row.listing {
+		margin: 0px;
+		padding: 0px;
+		margin-bottom: 24px;
+	}
+
+	.restaurants .listing .image-column {
+		padding: 0px;
+		margin-bottom: 12px;
+	}
+
+	.restaurants .listing .main-info-column {
+		padding: 0px;
+	}
+}
+
+.restaurants .listing .main-info-column h3 {
+	margin-top: 0px;
+}
+
+.restaurants .listing .main-info-column .address {
+	font-size: 14px;
+	color: #555;
+}
+
 .articles-list a .article-row {
 	padding-bottom: 36px;
 	border-bottom: 1px solid #eee;

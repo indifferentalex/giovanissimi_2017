@@ -7,7 +7,7 @@ permalink: /regolamento/
 
 # DATI GENERALI DELLA MANIFESTAZIONE
 
-La manifestazione si svolgerà nel periodo compreso tra il 15 ed 18 giugno 2017 a Porto Sant’Elpidio (FM) organizzata da: Gruppo Sportivo Faleriense cod. FCI 09K0884 e-mail: vincsantoni@gmail.com tel 389 1607169
+La manifestazione si svolgerà nel periodo compreso tra il **15 ed 18 giugno 2017** a Porto Sant’Elpidio (FM) organizzata da: **Gruppo Sportivo Faleriense cod. FCI 09K0884 e-mail: vincsantoni@gmail.com tel 389 1607169**
 
 ## MODALITA’ DI PARTECIPAZIONE
 
@@ -15,15 +15,15 @@ La manifestazione è aperta a tutte le società giovanili senza alcun limite num
 
 ## MODALITA’ DI ISCRIZIONE
 
-L’iscrizione viene effettuata esclusivamente attraverso una specifica procedura informatica i cui dettagli verranno specificati in un apposito documento pubblicato sul sito internet federale (www.federciclismo.it).
+L’iscrizione viene effettuata **esclusivamente** attraverso una specifica procedura informatica i cui dettagli verranno specificati in un apposito documento pubblicato sul sito internet federale (www.federciclismo.it).
 
-Si precisa che non verranno prese in considerazione le iscrizioni effettuate con altre modalità
+**Si precisa che non verranno prese in considerazione le iscrizioni effettuate con altre modalità**
 
-Il 03 giugno 2017 è prevista la data di scadenza dell’iscrizione degli atleti (da parte di ciascuna società).
+Il **03 giugno 2017** è prevista la data di scadenza dell’iscrizione degli atleti (da parte di ciascuna società).
 
-Dopo il 03 giugno non sarà più possibile togliere, aggiungere o modificare le iscrizioni effettuate.
+**Dopo il 03 giugno non sarà più possibile togliere, aggiungere o modificare le iscrizioni effettuate.**
 
-E’ prevista la penalizzazione di 3 punti, alla società interessata, per ogni atleta iscritto e non partecipante alla manifestazione (in base alla verifica tessere effettuata il Giovedì).
+**E’ prevista la penalizzazione di 3 punti, alla società interessata, per ogni atleta iscritto e non partecipante alla manifestazione (in base alla verifica tessere effettuata il Giovedì).**
 
 ## GARE IN PROGRAMMA
 
@@ -31,7 +31,7 @@ E’ prevista la penalizzazione di 3 punti, alla società interessata, per ogni 
 
 * Prova di velocità o prova fuoristrada e strada Cat. G4 - G5 - G6 maschili e femminili
 
-Per il coordinamento dei propri atleti ogni società dovrà designare, per ognuna delle gare in programma, un responsabile (tesserato FCI), che sarà l’unico referente con la Giuria. Sarà cura di ciascuna società inviare per e-mail: alla società organizzatrice (vincsantoni@gmail.com) e solo p.c. al Settore Giovanile (giovanile@federciclismo.it) l’allegato modulo, entro e non oltre il 03 giugno 2017.
+Per il coordinamento dei propri atleti ogni società dovrà designare, per ognuna delle gare in programma, un responsabile (tesserato FCI), che sarà l’unico referente con la Giuria. Sarà cura di ciascuna società inviare **per e-mail**: alla società organizzatrice (**vincsantoni@gmail.com**) e solo p.c. al Settore Giovanile (giovanile@federciclismo.it) l’allegato modulo, **entro e non oltre il 03 giugno 2017**.
 
 ## PROVA DI GINCANA (CAT. G1-G2-G3)
 
@@ -43,7 +43,7 @@ L’ordine di partenza e la distribuzione dei concorrenti sui 3 percorsi verrann
 
 Verranno effettuate, per ciascun concorrente, due prove non consecutive. In particolare, i concorrenti della stessa società affronteranno tutte e due le prove previste a rotazione e sullo stesso percorso di gara assegnato.
 
-In caso di errori durante l’effettuazione di ciascuna prova sono previste penalità a tempi stabilite in 3 secondi per ogni errore (abbattimento o mancato superamento di ciascun ostacolo).
+In caso di errori durante l’effettuazione di ciascuna prova sono previste penalità a tempi stabilite in **3 secondi** per ogni errore (abbattimento o mancato superamento di ciascun ostacolo).
 
 Per la classifica finale viene preso il miglior tempo tra le due prove.
 

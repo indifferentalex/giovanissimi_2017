@@ -276,6 +276,10 @@ button.navbar-toggle {
 	color: #1c8ce3;
 }
 
+.navbar .navbar-nav li.dropdown a:hover {
+	text-decoration: underline;
+}
+
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #fff;
 }

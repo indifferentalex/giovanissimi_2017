@@ -1,0 +1,296 @@
+---
+layout: default
+title: I campi di gara
+description: I campi di gara del Meeting Nazionale Giovanissimi Porto Sant'Elpidio 2017.
+permalink: /campi_gara/
+---
+
+<div class="row centerpiece">
+	<!-- <div class="col-md-5 col-md-push-7 vcenter">
+		<img class="centerpiece" src="{{ site.baseurl }}/assets/images/palm_trees.png"/>
+	</div> --><!--
+	--><!-- <div class="col-md-7 col-md-pull-5 vcenter"> -->
+	<div class="col-md-12 vcenter">
+		<h1>PERCORSI O CAMPI GARA</h1>
+		<p>Il Meeting di Porto Sant'Elpidio si svolge nella zona sud della città, esattamente nel quartiere Faleriense e prendendo come riferimento il lungomare Faleria, in una distanza di circa 800 metri avvengono tutte le manifestazioni.</p>
+	</div><!--
+	--><!-- <div class="col-md-5 video-column vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/knXMNXcQjqQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>-->
+</div>
+
+
+<div class="row">
+	<div class="col-md-6 vcenter">
+		<img class="very-small-frame" src="{{ site.baseurl }}/assets/images/diamond_palace.jpg"/>
+	</div><!--
+	--><div class="col-md-6 vcenter">
+		<h2>RITROVO SQUADRE</h2>
+		<p>Presso l’azienda Loriblu al Diamond Palace. Uscita autostrada di Porto Sant’Elpidio, alla rotonda a destra, 500 Mt sulle sinistra. Verranno segnalati tre grandi parcheggi.</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-push-6 vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/QFsEqih3-FQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!--
+	--><div class="col-md-6 col-md-pull-6 vcenter">
+		<h2>GINCANA</h2>
+		<p>Il tratto del lungomare Faleria, dove si transita con il  percorso B della prova su strada, si svolgerà il meeting di Gincana.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/FrdQlzf5FlE" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!--
+	--><div class="col-md-6 vcenter">
+		<h2>MOUNTAIN BIKE</h2>
+		<p>In una area verde, tra il lungomare Faleria e la parallela via Pesaro, tutte strade impegnate dal meeting nelle altre discipline, verranno disegnati due campi da Mountain Bike.</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-push-6 vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/b1D03fu-frQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!--
+	--><div class="col-md-6 col-md-pull-6 vcenter">
+		<h2>SPRINT</h2>
+		<p>La via Pesaro, strada parallela alla linea ferroviaria ed al lungomare Faleria,  nei suoi 500 metri, con un’ampia carreggiata di 9 metri, si svolgerà il meeting di Sprint.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/WLpiL2P7DaE" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!--
+	--><div class="col-md-6 vcenter">
+		<h2>STRADA</h2>
+		<p>Per la strada abbiamo due percorsi: A e B, tutti e due transitano per il lungomare Faleria, tra il percorso A e B c’buna distanza di 200 metri e questo spazio situato sul Lungomare Faleria ci sarà un’area Tecnica riservata alla prova rapporti e quant’altro.</p>
+		<p><strong>Percorso A</strong> - 850 metri. Partenza in senso anti orario, lungomare Faleria, via Curtatone (a sinistra), via Palermo (a destra), via Bari (a sinistra), lungomare Faleria (a sinistra). Arrivo.</p>
+		<p><strong>Percorso B</strong> - 1.150 metri. Partenza in senso orario, lungomare Faleria, via Faleria, via Milano (a destra), via Parma (a destra), via Catania (a sinistra), via Modena (a destra), lungomare Faleria (a destra). Arrivo.</p>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-push-6 vcenter">
+		<div class="video-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/WwbH3U2WglI" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!--
+	--><div class="col-md-6 col-md-pull-6 vcenter">
+		<h2>RITROVO DI PARTENZA STRADA</h2>
+		<p>Il ritrovo avviene presso il lungomare Faleria tra il circuito A e il circuito B. In questo tratto avviene la prova rapporti.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 parking-map-column vcenter">
+		<div id="map" style="height: 100%; width: 100%; position: relative;"></div>
+		<script>
+			function initMap() {
+				jQuery(function() {
+				    // Styles a map in night mode.
+				    var map = new google.maps.Map(document.getElementById('map'), {
+						center: { lat: 43.245121, lng: 13.768302 },
+						zoom: 12,
+						mapTypeId: 'satellite',
+						// scrollwheel: false,
+						streetViewControl: false,
+						fullscreenControl: false,
+						styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
+				    });
+
+				    // ,{"featureType":"road","elementType":"labels","stylers":[{"visibility": "off"}]}
+
+				    // categorie: 0 dove dormire, 1 campo di gioco, 2 parcheggi, 3 eventi
+
+				    var zoomLevelByCategory = function(category) {
+				    	if (category == 1) { // campo di gioco
+				    		return 17;
+				    	} else {
+				    		return 15;
+				    	}
+				    }
+
+			        var contentString = function(header, content, footer) {
+			        	return '<div id="content">'+
+			            '<div id="siteNotice">'+
+			            '</div>'+
+			            '<h1 id="firstHeading" class="firstHeading">' + header + '</h1>'+
+			            '<div id="bodyContent">'+
+			            '<p>' + content + '</p>'+
+			            '<p>' + footer + '</p>'+
+			            '</div>'+
+			            '</div>';
+			        }
+
+			        var infowindow = new google.maps.InfoWindow({
+			          content: contentString("Hello")
+			        });				
+
+					function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+						var R = 6371; // Radius of the earth in km
+						var dLat = deg2rad(lat2-lat1);  // deg2rad below
+						var dLon = deg2rad(lon2-lon1); 
+						var a = 
+						Math.sin(dLat/2) * Math.sin(dLat/2) +
+						Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+						Math.sin(dLon/2) * Math.sin(dLon/2)
+						; 
+						var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+						var d = R * c; // Distance in km
+						return d;
+					}
+
+					function deg2rad(deg) {
+						return deg * (Math.PI/180)
+					}
+
+					gare_lat = 43.247306;
+					gare_lng = 13.767885;
+
+				    var locations = [
+				    	{ id: 15, name: "Parcheggio A", category: 2, lat: 43.257334, lng: 13.760789, color: "f21111" },
+				    	{ id: 16, name: "Parcheggio B", category: 2, lat: 43.256376, lng: 13.761624, color: "f3e61e" },
+				    	{ id: 17, name: "Parcheggio C", category: 2, lat: 43.247198, lng: 13.765860, color: "1c8ce3" },
+				    	{ id: 18, name: "Parcheggio D", category: 2, lat: 43.235792, lng: 13.773019, color: "ff7100" },
+				    	{ id: 19, name: "Parcheggio E", category: 2, lat: 43.247393, lng: 13.766469, color: "24cb24" }
+				    ];
+
+				    for (i = 0; i < locations.length; i++) {
+				    	locations[i].distance = getDistanceFromLatLonInKm(gare_lat, gare_lng, locations[i].lat, locations[i].lng);
+				    }
+
+				    locations.sort(function(a, b) { return a.distance - b.distance });
+
+				    console.log(locations);
+
+				    var categories = [
+				    	{ name: "dove_dormire", unicode: '\uf236' },
+				    	{ name: "campo_di_gioco", unicode: '\uf206' },
+				    	{ name: "parcheggi", unicode: '\uf1b9' },
+				    	{ name: "eventi", unicode: '\uf02e' },
+				    	{ name: "ritrovi", unicode: '\uf02e' },
+				    	{ name: "premiazioni", unicode: '\uf02e' }
+				    ];
+
+					var image = {
+						url: '{{ site.baseurl }}/assets/images/map_icon.png',
+						// This marker is 20 pixels wide by 32 pixels high.
+						size: new google.maps.Size(64, 64),
+						scaledSize: new google.maps.Size(64, 64),
+						// The origin for this image is (0, 0).
+						origin: new google.maps.Point(0, 0),
+						// The anchor for this image is the base of the flagpole at (0, 32).
+						anchor: new google.maps.Point(18, 34)
+					};	
+
+					var imageSelected = {
+						url: '{{ site.baseurl }}/assets/images/map_selected_icon.png',
+						// This marker is 20 pixels wide by 32 pixels high.
+						size: new google.maps.Size(64, 64),
+						scaledSize: new google.maps.Size(64, 64),
+						// The origin for this image is (0, 0).
+						origin: new google.maps.Point(0, 0),
+						// The anchor for this image is the base of the flagpole at (0, 32).
+						anchor: new google.maps.Point(18, 34)
+					};
+
+					var labelColor = function(category_index, labelColor) {
+						return {
+							fontFamily: 'Fontawesome',
+							text: categories[category_index].unicode,
+							color: "#" + labelColor
+						}
+					}
+
+					var selectedLabelColor = function(category_index, labelColor) {
+						return {
+							fontFamily: 'Fontawesome',
+							text: categories[category_index].unicode,
+							color: "#fff"
+						}
+					}
+
+					var markers = []
+
+					// var markerMouseover = function(marker) {
+					// 	marker.setIcon(imageSelected);
+					// 	marker.setLabel(selectedLabelColor(marker.category_index, marker.color));
+					// 	$("#" + marker.location_id).addClass("highlighted");
+					// }	    
+
+					// var markerMouseout = function(marker) {
+					// 	marker.setIcon(image);
+					// 	marker.setLabel(labelColor(marker.category_index, marker.color));
+					// 	$("#" + marker.location_id).removeClass("highlighted");		
+					// }
+
+				    for (var i = 0; i < locations.length; i++) {
+						var marker = new google.maps.Marker({
+							position: { lat: locations[i].lat, lng: locations[i].lng },
+							map: map,
+							label: {
+								fontFamily: 'Fontawesome',
+								text: categories[locations[i].category].unicode,
+								color: "#" + locations[i].color
+							},
+							icon: image,
+							title: locations[i].name,
+							description: locations[i].description ? locations[i].description : "",
+							footer: locations[i].footer ? locations[i].footer : "",
+							category_index: locations[i].category,
+							location_id: locations[i].id
+						});			
+
+						google.maps.event.addListener(marker, 'mouseover', function() {
+							markerMouseover(this);
+						});
+
+						google.maps.event.addListener(marker, 'mouseout', function() {
+							markerMouseout(this);
+						});
+
+						markers.push(marker);			
+				    }
+
+				    var indexOfId = function(id) {
+						return locations.map(function(o) { return o.id; }).indexOf(id);		    	
+				    }								
+				});	    		    
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgCP_oxgz2IRDYZYvisAmOzFZuHXUDHF8&callback=initMap"
+		async defer></script>
+	</div><!--
+	--><div class="col-md-6 vcenter">
+		<h2>PARCHEGGI</h2>
+		<p>I parcheggi per i Team saranno tutti frecciati ed ad oggi lettera un colore, A/rosso, B/giallo, C/blu, D/arancione, E/verde e disposti nei seguenti modi:</p>
+		<ul>
+			<li>Parcheggio A - via Mameli lato est ex stadio Orfeo Serafini.</li>
+			<li>Parcheggio B - via Mameli lato ovest.</li>
+			<li>Parcheggio C - via Mazzini lato est tra caserma Carabinieri/ristorante il Gambero e via Pesaro nord nona verde ovest.</li>
+			<li>Parcheggio D - via Milano sud zona piscina e via Ravenna zona verde est.</li>
+			<li>Parcheggio E - via Pesaro lato ovest.</li>
+			<li>Parcheggio camper - Frontemare Parking e via Faleria nord.</li>
+		</ul>
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>PREMIAZIONI</h2>
+		<p>Le premiazioni avverranno tra l’incrocio di via Marina e lungomare Faleria, quadrata in legno sul mare.</p>
+	</div>
+</div>

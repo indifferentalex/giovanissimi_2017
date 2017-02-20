@@ -706,3 +706,7 @@ p.image-alt-text {
 		max-width: 100%;
 	}
 }
+
+.parking-map-column {
+	height: 300px;
+}

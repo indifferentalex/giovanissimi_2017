@@ -3,13 +3,13 @@ layout: article
 title: "Meeting Nazionale dei Giovanissimi 2017, un evento a misura di bambini e famiglie"
 description: "A poco più di sei mesi dallo svolgimento del Meeting Nazionale dei Giovanissimi-Memorial Adriano Morelli, sotto l'egida della Federazione Ciclistica Italiana, a Porto Sant’Elpidio si lavora alacremente per accogliere nel migliore dei modi i tanti bambini, le famiglie e gli accompagnatori delle società al seguito che raggiungeranno la cittadina balneare elpidiense tra il 15 e il 18 giugno."
 date: 2017-02-11 10:00:00 -0600
-image: /assets/images/porto-sant-elpidio.jpg
+image: https://s3.eu-central-1.amazonaws.com/giovanissimi/porto-sant-elpidio.jpg
 imagealt: "Il lungomare e la pista ciclabile di Porto Sant'Elpidio, con il mare a due passi"
 ---
 
 # Meeting Nazionale dei Giovanissimi 2017, un evento a misura di bambini e famiglie
 
-![Il lungomare e la pista ciclabile di Porto Sant'Elpidio, con il mare a due passi](/assets/images/porto-sant-elpidio.jpg)
+![Il lungomare e la pista ciclabile di Porto Sant'Elpidio, con il mare a due passi](https://s3.eu-central-1.amazonaws.com/giovanissimi/porto-sant-elpidio.jpg)
 
 A poco più di sei mesi dallo svolgimento del Meeting Nazionale dei Giovanissimi-Memorial Adriano Morelli, sotto l'egida della Federazione Ciclistica Italiana, a Porto Sant’Elpidio si lavora alacremente per accogliere nel migliore dei modi i tanti bambini, le famiglie e gli accompagnatori delle società al seguito che raggiungeranno la cittadina balneare elpidiense tra il 15 e il 18 giugno.
 

@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   che ospiterà il Meeting Nazionale Giovanissimi 2017.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://meetingpse2017.it" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/images/meeting_banner.jpg"
+logo: "https://s3.eu-central-1.amazonaws.com/giovanissimi/meeting_banner.jpg"
 # twitter_username: jekyllrb
 # github_username:  jekyll
 

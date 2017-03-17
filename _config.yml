@@ -23,6 +23,7 @@ url: "http://meetingpse2017.it" # the base hostname & protocol for your site, e.
 logo: "https://s3.eu-central-1.amazonaws.com/giovanissimi/meeting_banner.jpg"
 # twitter_username: jekyllrb
 # github_username:  jekyll
+current_year: 2017
 
 # Build settings
 markdown: kramdown

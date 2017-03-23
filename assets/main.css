@@ -21,6 +21,22 @@ p a {
 	font-family: 'Quattrocento', serif;	
 }
 
+a h3 {
+	color: #333;
+}
+
+a:hover h3 {
+	color: #1c8ce3;
+}
+
+a:hover p {
+	color: #1c8ce3;
+}
+
+a p {
+	color: #333;
+}
+
 @media only screen and (min-width : 992px) {
 	.very-small-frame {
 		padding: 10%;

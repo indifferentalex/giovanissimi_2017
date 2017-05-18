@@ -9,6 +9,8 @@ imagealt: "Mascot del Meeting Nazionale Giovanissimi edizione 2017"
 
 # Meeting Nazionale Giovanissimi FCI, meno di un mese al festival giovanile a due ruote d’Italia
 
+#### Luca Alò - {{ page.date | date: '%m/%d/%Y' }}
+
 ![Mascot del Meeting Nazionale Giovanissimi edizione 2017](https://s3.eu-central-1.amazonaws.com/giovanissimi/logo_nuovo.png)
 
 “La città che ha il mare e la bici nel cuore”: ogni anno Porto Sant’Elpidio mostra con orgoglio la propria vocazione al ciclismo, sport strettamente legato alla promozione del territorio che rappresenta il valore aggiunto dell’attività organizzativa della Gio.Ca. Communications e dell’amministrazione comunale di Porto Sant’Elpidio legati ai grandi eventi che ruotano al marchio de il Grande Ciclismo a Porto Sant’Elpidio.

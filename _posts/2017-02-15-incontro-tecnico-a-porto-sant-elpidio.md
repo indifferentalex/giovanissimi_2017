@@ -9,6 +9,8 @@ imagealt: "L’incontro tecnico tenutosi presso il Municipio di Porto Sant’Elp
 
 # A Porto Sant’Elpidio incontro tecnico tra organizzatori e amministrazione comunale per il Meeting Nazionale Giovanissimi FCI
 
+#### Luca Alò - {{ page.date | date: '%m/%d/%Y' }}
+
 ![l’incontro tecnico tenutosi presso il Municipio di Porto Sant’Elpidio in vista del Meeting Nazionale dei Giovanissimi FCI dal 15 al 18 giugno](https://s3.eu-central-1.amazonaws.com/giovanissimi/incontro_tecnico_1.jpg)
 
 Positivo e ricco di spunti di interesse l’incontro tecnico tenutosi presso il Municipio di Porto Sant’Elpidio in vista del Meeting Nazionale dei Giovanissimi FCI dal 15 al 18 giugno per un evento che è sinonimo di perfetto connubio tra sport e turismo per il tanto atteso evento nazionale per il ciclismo baby di tutta Italia dai 7 ai 12 anni con un grande seguito di famiglie ed accompagnatori per un totale di 4000 presenze annunciate nella cittadina balneare elpidiense.

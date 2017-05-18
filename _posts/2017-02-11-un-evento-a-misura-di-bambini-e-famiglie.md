@@ -24,3 +24,5 @@ Ogni famiglia o squadra può effettuare direttamente la propria prenotazione sul
 Gran parte delle strutture sono nel territorio di Porto Sant'Elpidio, ad una distanza massima dai campi gara di 6 chilometri, raggiungibili con una bellissima pista ciclabile che si snoda su tutto il territorio elpidiense e sul lungomare.
 
 Tutti coloro che usufruiranno le strutture convenzionate, riceveranno un’apposita card che abilita sconti e offerte vantaggiose su tantissimi prodotti e servizi locali contribuendo così anche all’animazione del territorio.
+
+Tutte le procedure di iscrizione per le singole società sono riconducibili al sito della Federazione Ciclistica Italiana nella sezione Giovanile al link http://giovanile.federciclismo.it/it/infopage/come-ci-si-iscrive/f68c79f8-7b95-4a8d-9fad-dd6c32d4a4a0/

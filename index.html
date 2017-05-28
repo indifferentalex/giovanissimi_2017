@@ -6,7 +6,7 @@ description: Benvenuti a Porto Sant'Elpidio, la cittadina sul litorale Marchigia
 
 <div class="row centerpiece">
 	<div class="col-md-5 col-md-push-7 vcenter">
-		<img class="centerpiece" src="{{ site.baseurl }}https://s3.eu-central-1.amazonaws.com/giovanissimi/sasha_centerpiece.jpg"/>
+		<img class="centerpiece" src="https://s3.eu-central-1.amazonaws.com/giovanissimi/sasha_centerpiece.jpg"/>
 	</div><!--
 	--><div class="col-md-7 col-md-pull-5 vcenter">
 		<h1>Benvenuti a Porto Sant'Elpidio</h1>
@@ -14,6 +14,67 @@ description: Benvenuti a Porto Sant'Elpidio, la cittadina sul litorale Marchigia
 		<p>La grande presenza di società sportive ciclistiche e le migliaia di persone che oggi praticano il ciclismo a Porto Sant’Elpidio hanno reso la cittadina la protagonista di eventi importanti come il Giro d'Italia, la Tirreno-Adriatico, il Giro delle Regioni, Gare di Under 23 fino ad arrivare ai più giovani. Le nostre strade, sia lungo la costa che collinari, fino ad arrivare ai Monti Azzurri e Sibillini, si prestano per lunghi allenamenti sia con bici da corsa che con mountain bike. Con il nostro amore per questo sport, con le nostre spiagge Bandiera Blu, le nostre fabbriche che sono il cuore della produzione calzaturiera in Italia, con i tramonti spettacolari dietro ai monti, ce la metteremo tutta per stupirvi!</p>
 		<p><i>"La città che ha il mare e la bici nel cuore"</i></p>
 	</div>
+</div>
+
+<script type="text/javascript">
+	jQuery(function() {
+		basePath = "https://s3.eu-central-1.amazonaws.com/giovanissimi/";
+		extension = "_sponsor.jpg";
+		goldSponsors = ["giorgio_mare"];
+		mainSponsorsOne = ["loriblu", "madi_service", "givi", "il_gambero"];
+		mainSponsorsTwo = ["omm", "tutti_campioni", "lineaoro", "femblu"];
+		sponsorsOne = ["didacus", "hair_services", "ares", "marinozzi", "esserre", "sebastiano_migliore", "archidea", "bedetta", "vetreria_petrini", "ecopel", "progetto_alto_gradimento", "autocarrozzeria_cognini"];
+		sponsorsTwo = ["renzi", "tacchificio_moderno", "benzi_pellami", "italtacco", "perla_sul_mare", "flog", "fabiani", "cluanplast", "brasili", "sbrolla", "black_label", "eco_elpidiense"];
+		sponsorsThree = ["ars", "steca", "luciani", "repo", "biotre_consulting", "biotre_servizi", "euro_graf", "sorbatti", "carrozzeria_adriatica", "nero_servizi", "ch_hotels", "inline", "fraben", "assoittico"];
+
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
+		function getRandomIntInclusive(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		possiblePositions = [1, 2, 3, 4, 5, 6];
+		finalOrder = [];
+
+		var possiblePositionsLength = possiblePositions.length - 1;
+		console.log(possiblePositionsLength);
+		for (var i = 0; i < possiblePositions.length; i++) {
+			var positionChosen = getRandomIntInclusive(0, possiblePositionsLength);
+			finalOrder[i] = possiblePositions[positionChosen];
+			// var temp = possiblePositions[finalOrder[i]];
+			console.log("position chosen: " + positionChosen + " value: " + finalOrder[i]);
+			possiblePositions[positionChosen] = possiblePositions[possiblePositionsLength];
+			console.log(possiblePositions);		
+			possiblePositionsLength--;
+		}
+
+		for (var i = 0; i < finalOrder.length; i++) {
+			if (finalOrder[i] == 1) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + goldSponsors[0] + extension);
+			} else if (finalOrder[i] == 2) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsOne[getRandomIntInclusive(0, 3)] + extension);
+			} else if (finalOrder[i] == 3) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsTwo[getRandomIntInclusive(0, 3)] + extension);
+			} else if (finalOrder[i] == 4) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsOne[getRandomIntInclusive(0, sponsorsOne.length - 1)] + extension);
+			} else if (finalOrder[i] == 5) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsTwo[getRandomIntInclusive(0, sponsorsTwo.length - 1)] + extension);
+			} else if (finalOrder[i] == 6) {
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsThree[getRandomIntInclusive(0, sponsorsThree.length - 1)] + extension);
+			}
+		}
+	});
+</script>
+
+<div class="row sponsors">
+	<div class="col-md-12"><h2>Un ringraziamento agli Sponsor</h2></div>
+	<div class="col-md-2"><img id="sponsor_1" src=""/></div>
+	<div class="col-md-2"><img id="sponsor_2" src=""/></div>
+	<div class="col-md-2"><img id="sponsor_3" src=""/></div>
+	<div class="col-md-2"><img id="sponsor_4" src=""/></div>
+	<div class="col-md-2"><img id="sponsor_5" src=""/></div>
+	<div class="col-md-2"><img id="sponsor_6" src=""/></div>
 </div>
 
 <div class="row">

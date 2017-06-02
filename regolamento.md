@@ -218,6 +218,11 @@ In caso di pari merito verrà presa in considerazione la classifica provvisoria 
 
 Il sodalizio primo classificato avrà il titolo di: **SOCIETA’ GIOVANILE VINCITRICE DEL MEETING NAZIONALE SOCIETA’ PER GIOVANISSIMI 2017**.
 
+<a name="cronometraggio"></a>
+## SERVIZIO DI CRONOMETRAGGIO
+
+Il servizio cronometraggio è curato da Kronoservice, mediante chip applicati sulle bici dei ragazzi. la consegna dei chip avviene giovedi 15 giugno durante le operazioni di verifica licenze e consegna numeri al Diamond Palace. Al ritiro del chip, per ogni chip debbono essere lasciate 10 euro di cauzione che saranno restituite alla riconsegna del chip.
+
 ## PREMIO FRANCO BALLERINI
 
 Il premio sarà assegnato per la sfilata della cerimonia di apertura del 15 giugno alla società che meglio rispetta i seguenti criteri:

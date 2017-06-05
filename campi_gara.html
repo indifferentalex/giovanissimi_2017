@@ -273,14 +273,55 @@ permalink: /campi_gara/
 				jQuery(function() {
 				    // Styles a map in night mode.
 				    var map = new google.maps.Map(document.getElementById('gazebomap'), {
-						center: { lat: 43.247470, lng: 13.766821 },
-						zoom: 15,
+						center: { lat: 43.246281, lng: 13.769059 },
+						zoom: 16,
 						mapTypeId: 'satellite',
 						// scrollwheel: false,
 						streetViewControl: false,
 						fullscreenControl: false,
 						styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#1c8ce3"},{"visibility":"on"}]}]
 				    });
+
+			        // Define the LatLng coordinates for the polygon's path.
+			        var areaSquadreCoords = [
+			          { lat: 43.246832, lng: 13.768551 },
+			          { lat: 43.246902, lng: 13.768862 },
+			          { lat: 43.245909, lng: 13.769511 },
+			          { lat: 43.245788, lng: 13.769114 },
+			          { lat: 43.246832, lng: 13.768551 }
+			        ];
+
+			        // Construct the polygon.
+			        var areaSquadre = new google.maps.Polygon({
+			          paths: areaSquadreCoords,
+			          strokeColor: '#FF0000',
+			          strokeOpacity: 0.8,
+			          strokeWeight: 2,
+			          fillColor: '#FF0000',
+			          fillOpacity: 0.35
+			        });
+			        areaSquadre.setMap(map);
+
+			        var areaEspositoriCoords = [
+			          { lat: 43.248289, lng: 13.766439 },
+			          { lat: 43.246609, lng: 13.767362 },
+			          { lat: 43.246898, lng: 13.768408 },
+			          { lat: 43.247007, lng: 13.768333 },
+			          { lat: 43.246741, lng: 13.767496 },
+			          { lat: 43.248332, lng: 13.766645 },
+			          { lat: 43.248289, lng: 13.766439 }
+			        ];
+
+			        // Construct the polygon.
+			        var areaEspositori = new google.maps.Polygon({
+			          paths: areaEspositoriCoords,
+			          strokeColor: '#0bc70b',
+			          strokeOpacity: 0.8,
+			          strokeWeight: 2,
+			          fillColor: '#0bc70b',
+			          fillOpacity: 0.35
+			        });
+			        areaEspositori.setMap(map);			        				    
 
 				    // ,{"featureType":"road","elementType":"labels","stylers":[{"visibility": "off"}]}
 
@@ -290,7 +331,7 @@ permalink: /campi_gara/
 				    	if (category == 1) { // campo di gioco
 				    		return 17;
 				    	} else {
-				    		return 15;
+				    		return 18;
 				    	}
 				    }
 
@@ -332,7 +373,8 @@ permalink: /campi_gara/
 					gare_lng = 13.767885;
 
 				    var locations = [
-				    	{ id: 15, name: "Area Gazebo", category: 4, lat: 43.247470, lng: 13.766821, color: "f21111" }
+				    	{ id: 15, name: "Area Squadre", category: 4, lat: 43.246281, lng: 13.769059, color: "f21111" },
+				    	{ id: 16, name: "Area Espositori", category: 4, lat: 43.246988, lng: 13.767302, color: "0bc70b" }
 				    ];
 
 				    for (i = 0; i < locations.length; i++) {
@@ -473,8 +515,10 @@ permalink: /campi_gara/
 		<div id="gazebomap" style="height: 100%; width: 100%; position: relative;"></div>
 	</div><!--
 	--><div class="col-md-6 vcenter">
-		<h2>Area Gazebo</h2><a name="premiazioni"></a>
-		<p>Situata in via Pesaro nord lato ovest, saranno qui presenti numerosi esponenti di vari gadget e abbigliamento.</p>
+		<h2>Area Gazebo</h2><a name="area_gazebo"></a>
+		<p>Saranno presenti due aree gazebo, una per le Società Sportive e una per gli esponenti di gadget e abbigliamento.</p>
+		<p>Nello spazio verde tra il lungomare Faleria e Via Curtatone sarà situata <span style="color: #f21111">l'area per le squadre (indicata in rosso sulla cartina)</span>, posta convenientemente vicino ai campi gara.</p>
+		<p>Lungo il lato Sud e Ovest (lungo Via Pesaro) del campo di Mountain Bike invece ci sarà <span style="color: #0bc70b">l'area espositori (indicata in verde sulla cartina)</span>.</p>
 	</div>
 </div>
 

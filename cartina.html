@@ -85,6 +85,7 @@ permalink: /cartina/
 				    	{ id: 21, name: "Parcheggio E", category: 2, lat: 43.247393, lng: 13.766469 },
 				    	{ id: 19, name: "Diamond Palace Loriblu", category: 4, lat: 43.233177, lng: 13.749899 },
 				    	{ id: 20, name: "Via Marina e Lungomare Faleria", category: 5, lat: 43.242503, lng: 13.772052 },
+				    	{ id: 333, name: "Area Squadre", category: 5, lat: 43.246281, lng: 13.769059 }
 				    ];
 
 				    var categories = [
@@ -286,7 +287,27 @@ permalink: /cartina/
 								}
 							});
 						}
-					}									
+					}
+
+			        // Define the LatLng coordinates for the polygon's path.
+			        var areaSquadreCoords = [
+			          { lat: 43.246832, lng: 13.768551 },
+			          { lat: 43.246902, lng: 13.768862 },
+			          { lat: 43.245909, lng: 13.769511 },
+			          { lat: 43.245788, lng: 13.769114 },
+			          { lat: 43.246832, lng: 13.768551 }
+			        ];
+
+			        // Construct the polygon.
+			        var areaSquadre = new google.maps.Polygon({
+			          paths: areaSquadreCoords,
+			          strokeColor: '#FF0000',
+			          strokeOpacity: 0.8,
+			          strokeWeight: 2,
+			          fillColor: '#FF0000',
+			          fillOpacity: 0.35
+			        });
+			        areaSquadre.setMap(map);													
 				});	    		    
 			}
 		</script>
@@ -571,6 +592,24 @@ permalink: /cartina/
 				</div>
 			</div>					
 		</div>-->	
+		<h3>Area Squadre</h3>
+		<div class="features-sub-list">
+			<div id="333" class="row single-feature">
+				<a href="#333"></a>
+				<div class="col-xs-12 text vcenter">
+					<div class="row">
+						<div class="col-xs-12">
+							<h5>Area Associazioni Sportive</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Gazebo delle squadre partecipanti</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<h3>Campi di Gioco</h3>
 		<div class="features-sub-list">
 			<div id="8" class="row single-feature">

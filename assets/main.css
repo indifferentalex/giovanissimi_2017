@@ -55,6 +55,83 @@ a p {
 	}
 }
 
+/*.collapse {
+	display: block;
+	overflow: hidden;
+}
+*/
+
+/*https://stackoverflow.com/questions/19827605/change-bootstrap-navbar-collapse-breakpoint-without-using-less*/
+/* new vertical menu nav starts here */
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+/*
+#header.navbar {
+	min-height: 148px;
+}
+
+@media only screen and (max-width : 991px) {
+	#vertical-menu {
+		display: none;
+	}
+}
+
+@media only screen and (min-width : 991px) {
+	#header .nav.navbar-nav.navbar-right {
+		display: none;
+	}
+}
+
+ul#vertical-menu li.main-link {
+	padding-left: 12px;
+}
+
+ul#vertical-menu li.main-link-header {
+}
+
+ul#vertical-menu li.main-link.second-level {
+	padding-left: 24px;
+}
+
+ul#vertical-menu li.main-link-header.second-level {
+	padding-left: 12px;
+}*/
+/* new vertical menu nav ends here */
+
 .la-storia img.very-small-frame {
 	padding: 10%;
 }

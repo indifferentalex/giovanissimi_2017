@@ -803,3 +803,11 @@ p.image-alt-text {
 .parking-map-column {
 	height: 300px;
 }
+
+div.row.list-header-row {
+	margin-bottom: 0px;
+}
+
+.list-header {
+	border-bottom: 1px solid #eee;
+}

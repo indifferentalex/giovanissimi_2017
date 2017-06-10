@@ -21,11 +21,12 @@ description: Benvenuti a Porto Sant'Elpidio, la cittadina sul litorale Marchigia
 		basePath = "https://s3.eu-central-1.amazonaws.com/giovanissimi/";
 		extension = "_sponsor.jpg";
 		goldSponsors = ["giorgio_mare"];
-		mainSponsorsOne = ["loriblu", "madi_service", "givi", "il_gambero"];
-		mainSponsorsTwo = ["omm", "tutti_campioni", "lineaoro", "femblu"];
-		sponsorsOne = ["didacus", "hair_services", "ares", "marinozzi", "esserre", "sebastiano_migliore", "archidea", "bedetta", "vetreria_petrini", "ecopel", "progetto_alto_gradimento", "autocarrozzeria_cognini"];
-		sponsorsTwo = ["renzi", "tacchificio_moderno", "benzi_pellami", "italtacco", "perla_sul_mare", "flog", "fabiani", "cluanplast", "brasili", "sbrolla", "black_label", "eco_elpidiense"];
-		sponsorsThree = ["ars", "steca", "luciani", "repo", "biotre_consulting", "biotre_servizi", "euro_graf", "sorbatti", "carrozzeria_adriatica", "nero_servizi", "ch_hotels", "inline", "fraben", "assoittico"];
+		mainSponsorsOne = ["loriblu", "omm"];
+		mainSponsorsTwo = ["givi", "lineaoro", "il_gambero"];
+		mainSponsorsThree = ["madi_service", "tutti_campioni", "femblu"];
+		sponsorsOne = ["didacus", "hair_services", "ares", "marinozzi", "esserre", "sebastiano_migliore", "archidea", "bedetta", "vetreria_petrini", "ecopel", "progetto_alto_gradimento", "ars", "steca", "luciani", "repo", "biotre_consulting", "biotre_servizi", "ala_ambiente_analisi", "kelton", "envision", "fintel", "rosa_edilizia", "perticarini_edile"];
+		sponsorsTwo = ["renzi", "tacchificio_moderno", "benzi_pellami", "italtacco", "perla_sul_mare", "flog", "fabiani", "cluanplast", "brasili", "sbrolla", "black_label", "eco_elpidiense", "euro_graf", "sorbatti", "carrozzeria_adriatica", "nero_servizi", "ch_hotels", "inline", "fraben", "assoittico", "proff", "redgeco", "conad"];
+		// sponsorsThree = ["ars", "steca", "luciani", "repo", "biotre_consulting", "biotre_servizi", "euro_graf", "sorbatti", "carrozzeria_adriatica", "nero_servizi", "ch_hotels", "inline", "fraben", "assoittico"];
 
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
 		function getRandomIntInclusive(min, max) {
@@ -53,15 +54,15 @@ description: Benvenuti a Porto Sant'Elpidio, la cittadina sul litorale Marchigia
 			if (finalOrder[i] == 1) {
 				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + goldSponsors[0] + extension);
 			} else if (finalOrder[i] == 2) {
-				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsOne[getRandomIntInclusive(0, 3)] + extension);
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsOne[getRandomIntInclusive(0, mainSponsorsOne.length - 1)] + extension);
 			} else if (finalOrder[i] == 3) {
-				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsTwo[getRandomIntInclusive(0, 3)] + extension);
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsTwo[getRandomIntInclusive(0, mainSponsorsTwo.length - 1)] + extension);
 			} else if (finalOrder[i] == 4) {
 				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsOne[getRandomIntInclusive(0, sponsorsOne.length - 1)] + extension);
 			} else if (finalOrder[i] == 5) {
 				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsTwo[getRandomIntInclusive(0, sponsorsTwo.length - 1)] + extension);
 			} else if (finalOrder[i] == 6) {
-				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + sponsorsThree[getRandomIntInclusive(0, sponsorsThree.length - 1)] + extension);
+				$("#sponsor_" + (i + 1).toString()).attr("src", basePath + mainSponsorsThree[getRandomIntInclusive(0, mainSponsorsThree.length - 1)] + extension);
 			}
 		}
 	});

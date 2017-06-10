@@ -35,7 +35,13 @@ Ritrovo e parcheggio presso ex stadio Orfeo Serafini lungomare centro Via Mameli
 
 	**Percorso B** - 850 metri. Partenza in senso anti orario, lungomare Faleria, a sinistra via Curtatone, a sinistra via Palermo, a sinistra via Bari, a sinistra lungomare Faleria. **Arrivo.**     
 
-- 18.30-19.30 - **Premiazione della giornata**. Quadrata incrocio Via Marina, Lungomare Faleria.    
+- 18.30-19.30 - **Premiazione della giornata**. Quadrata incrocio Via Marina, Lungomare Faleria.
+
+- 21.30 <a href="https://s3.eu-central-1.amazonaws.com/giovanissimi/believers_band_sabato.jpeg" target="_blank"><strong>La Believers Band</strong></a> propone un vasto repertorio che spazia dal Rhythm & Blues al Rock, Funky e Beat dagli anni '50 fino ad oggi.
+
+	Ogni esibizione è ricca di coinvolgimento e divertimento, grazie alla carica di una vera e propria band che vanta la presenza della sezione fiati.
+
+	Componenti: - Luca Ciarpella: voce, sax contralto - Michele Galluzzo: chitarra, cori - Stefano Rotelli: sax tenore - Marco semplici: tromba - Giampiero Percossi: tastiere - Marco Natalini: basso - Andrea Strappa: batteria
 
 
 ### DOMENICA 18 GIUGNO

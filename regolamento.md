@@ -221,7 +221,7 @@ Il sodalizio primo classificato avrà il titolo di: **SOCIETA’ GIOVANILE VINCI
 <a name="cronometraggio"></a>
 ## SERVIZIO DI CRONOMETRAGGIO
 
-Il servizio cronometraggio è curato da Kronoservice, mediante chip applicati sulle bici dei ragazzi. la consegna dei chip avviene giovedi 15 giugno durante le operazioni di verifica licenze e consegna numeri al Diamond Palace. Al ritiro del chip, per ogni chip debbono essere lasciate 10 euro di cauzione che saranno restituite alla riconsegna del chip.
+Il servizio cronometraggio è curato da Kronoservice, mediante chip applicati sulle bici dei ragazzi. la consegna dei chip avviene giovedi 15 giugno durante le operazioni di verifica licenze e consegna numeri al Diamond Palace. Per ogni chip debbono essere lasciate 10 euro di cauzione che saranno restituite alla riconsegna del chip.
 
 ## PREMIO FRANCO BALLERINI
 

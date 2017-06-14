@@ -2,6 +2,8 @@
 layout: default
 title: Polizza Privacy
 permalink: /privacy/
+image: https://s3.eu-central-1.amazonaws.com/giovanissimi/porto_sant_elpidio_veduta_dall_alto.jpg
+imagealt: "Porto Sant'Elpidio, sulla costa Marchigiana, città ospite del Meeting Nazionale dei Giovanissimi di ciclismo 2017"
 ---
 
 ## Privacy policy

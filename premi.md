@@ -3,6 +3,8 @@ layout: article
 title: L'elenco premi del Meeting Nazionale Giovanissimi Porto Sant'Elpidio 2017
 description: La lista completa dei premi.
 permalink: /premi/
+image: https://s3.eu-central-1.amazonaws.com/giovanissimi/porto_sant_elpidio_veduta_dall_alto.jpg
+imagealt: "Porto Sant'Elpidio, sulla costa Marchigiana, città ospite del Meeting Nazionale dei Giovanissimi di ciclismo 2017"
 ---
 
 # PREMI DEL MEETING Nazionale Giovanissimi PSE 2017

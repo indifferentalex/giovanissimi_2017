@@ -4,7 +4,7 @@ title: "Meeting Nazionale dei Giovanissimi FCI, il programma completo delle gare
 description: "Saranno giorni importanti, quelli che dal 15 al 18 giugno animeranno Porto Sant’Elpidio: all’insegna della passione per il ciclismo giovanile e del divertimento si svolgerà il 31° Meeting Nazionale dei Giovanissimi-Memorial Adriano Morelli che coinvolgerà un grande numero di baby atleti, famiglie, accompagnatori e pubblico."
 date: 2017-06-07 10:00:00 -0600
 image: https://s3.eu-central-1.amazonaws.com/giovanissimi/porto_sant_elpidio_veduta_dall_alto.jpg
-imagealt: "Porto Sant'Elpidio, sulla costa Marchigiana, citta ospite del Meeting Nazionale dei Giovanissimi di ciclismo 2017 vista dall'alto, visibile tutta la costa e il monte Conero"
+imagealt: "Porto Sant'Elpidio, sulla costa Marchigiana, città ospite del Meeting Nazionale dei Giovanissimi di ciclismo 2017 vista dall'alto, visibile tutta la costa e il monte Conero"
 ---
 
 # Meeting Nazionale dei Giovanissimi FCI, il programma completo delle gare a Porto Sant’Elpidio

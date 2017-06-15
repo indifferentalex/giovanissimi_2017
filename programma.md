@@ -7,6 +7,10 @@ permalink: /programma/
 
 # PROGRAMMA MEETINGPSE2017
 
+### [Il Meeting in Tempo Reale](http://www.federciclismo.it/it/hierarchical_documents_page/iscritti-e-partenze/0bfa1f40-f68d-47db-9463-2b7e47fa5a11/), sito della FCI dove trovare l'elenco delle partenze per le giorante del Meeting
+
+<br/>
+
 ### GIOVEDÌ 15 GIUGNO
 
 * 9.00-12.30 - **Verifica tessere** - Diamond Palace Loriblu. Via dell’Economia, 9.

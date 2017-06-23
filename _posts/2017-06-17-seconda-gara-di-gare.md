@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Meeting Nazionale dei Giovanissimi FCI, in archivio la seconda giornata di gare"
-description: "Sole, mare e biciclette a Porto Sant’Elpidio: tre elementi che hanno proiettato all’apice dell’entusiasmo il Meeting Nazionale dei Giovanissimi sotto l’egida della Federazione Ciclistica Italiana che ha mandato agli archivi la seconda giornata di gare con le batterie su strada per le categorie G1-G2-G3-G6 maschili e femminili in un crescendo di sorrisi e di divertimento sui pedali nei due circuiti appositamente allestiti sul lungomare sud della città elpidiense nel quartiere Faleriense."
+description: "Il programma delle gare di domani, domenica 18 giugno, prevede lo svolgimento delle prove su strada (dalle 9:00 alle 13:00) per le categorie G5 maschili e femminili sul percorso A (1150 metri, partenza in senso orario, lungomare Faleria, via Faleria, a destra via Milano, a destra via Parma, a sinistra via Catania, a destra via Modena, a destra lungomare Faleria arrivo), G4 maschili e femminili sul percorso B (850 metri, partenza in senso anti orario, lungomare Faleria, a sinistra via Curtatone, a sinistra via Palermo, a sinistra via Bari, a sinistra lungomare Faleria arrivo)."
 date: 2017-06-17 00:00:00 -0600
 image: https://s3.eu-central-1.amazonaws.com/giovanissimi/meetingsecondagiornata.jpg
 imagealt: "Le gare di circuito su strada della seconda giornata del Meeting Nazionale Giovanissimi 2017"
